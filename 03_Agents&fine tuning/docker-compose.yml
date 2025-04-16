@@ -1,0 +1,11 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "12399:12399"  # Use the correct Ollama port
+    volumes:
+      - models:/root/.ollama/models
+    restart: always
+
+volumes:
+  models:
